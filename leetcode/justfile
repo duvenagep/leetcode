@@ -1,0 +1,8 @@
+test q:
+    cargo test --package {{q}}
+
+run q:
+    cargo run --package {{q}} --bin question
+
+create q:
+    cargo generate --path ./daily-template --name {{q}}

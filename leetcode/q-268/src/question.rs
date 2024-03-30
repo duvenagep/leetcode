@@ -1,5 +1,6 @@
-pub fn process(_input: &str) -> Result<String, Box<dyn std::error::Error>> {
-    Ok("q_268 - part 1".to_string())
+pub fn process(_input: Vec<i32>) -> Result<i32, Box<dyn std::error::Error>> {
+    let r = _input.into_iter().max();
+    Ok(r.unwrap())
 }
 
 #[cfg(test)]
@@ -8,10 +9,10 @@ mod tests {
 
     #[test]
     fn it_works() {
-        let input = "INPUT GOES HERE";
+        let input = vec![3, 0, 1];
 
         let result = process(input).unwrap();
-        let answer = "ANSWER GOES HERE".to_string();
+        let answer = 2;
         assert_eq!(result, answer);
     }
 }
